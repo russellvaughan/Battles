@@ -14,12 +14,17 @@ enable :sessions
     redirect '/play'
   end
 
-    get '/play' do 
-      @player1 = session[:player1]
-      @player2 = session[:player2]
-      erb(:play)
-    end
+  get '/play' do 
+    @player1 = session[:player1]      
+    @player2 = session[:player2]
+    erb(:play)
+  end
+  
+  get '/player2' do
+    erb(:player2)
+  end
 
   # start the server if ruby file executed directly
   run! if app_file == $0
 end
+# 
