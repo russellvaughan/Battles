@@ -1,10 +1,16 @@
 <div>
   <h3>Opponent Monster</h3>
   <div style="display:block; width:150px;height:150px;background:#eee;"></div>
-  <span><%= @game.player2.name %>: <%= @game.player2.hit_points %> HP</span>
+  <span><%= @game.players[1].name %>: <%= @game.players[1].hit_points %> HP</span>
 </div>
 <h1>
-  <%= @game.player1.name %> vs. <%= @game.player2.name %>
+  <%= @game.players[0].name %> vs. <%= @game.players[1].name %>
 </h1>
 <a href="/attack" style="display:inline-block;padding:10px;border:1px solid #ccc;text-decoration:none;">Attack
 </a>
+
+<div>
+  <h3>My Monster</h3>
+  <div style="display:block; width:150px;height:150px;background:#eee;"></div>
+  <span><%= @game.players[0].name %>: <%= @game.players[0].hit_points %> HP</span>
+</div>
