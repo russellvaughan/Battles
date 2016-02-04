@@ -16,12 +16,6 @@ describe Player do
     end
   end
 
-  describe "#attack" do
-    it "confirm player hitted another player" do
-      expect(player2).to receive(:receive_damage)
-      player1.attack(player2)
-    end
-  end
 
   describe "#receive_damage" do
     it "reduce opponents HP" do
