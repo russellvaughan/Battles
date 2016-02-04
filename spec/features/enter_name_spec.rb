@@ -8,10 +8,7 @@ describe 'Entering names' do
   end
 
   it 'accepts the names' do
-    visit('/')
-    fill_in('player_1_name', with: 'Alain')
-    fill_in('player_2_name', with: 'Rebecca')
-    click_button('Submit')
+    sign_in_and_play
     expect(page).to have_content('Alain vs Rebecca')
   end
 end
